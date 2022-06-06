@@ -1,0 +1,62 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+	git branch -
+ (Postman; Jmeter; CheckLists; Bag Reports; SQL; Charles; Mobile testing)
+	git checkout -b "назва гілки" - команда створю гілку і відразу пригає в неї 
+	перехід на гілку git checkout 
+
+2. Запушить все ветки на внешний репозиторий
+	git push -u origin '--all'
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+	git checkout Bagreports
+	cat >bag_1.txt
+1. Не отображается ссылка /free-page в блоке “Free Products” в футере
+2. Не переносится на новую строку
+3. Не соответствует макету цвет текста в блоке Contact в футере
+	
+
+4. Запушить структуру багрепорта на внешний репозиторий
+	git add .
+	git commit -m "add bag_1.txt"
+	git push -u origin bagreports
+
+5. Вмержить ветку Bag Reports в Main
+	git checkout main
+	git merge bagreports -m "merge_bagreports"
+
+6. Запушить main на внешний репозиторий.
+	git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+	git checkout CheckLists
+	cat >chekclist.txt
+Регистрация
+Email
+Соцсети
+Валидация
+Авторизация
+Пользователь активирован
+Пользователь не активирован
+Восстановление пароля
+Валидация полей
+	
+
+8. Запушить структуру на внешний репозиторий
+	git add .
+	git commit -m "chekclist.txt"
+	git push -u origin CheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+	Pull Request /create pull Request / Merge pull Request / confirm merge
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+	git checkout main
+	git fetch
+	git pull
